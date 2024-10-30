@@ -10,7 +10,6 @@ namespace For_u.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
     public class ComentariosController : ControllerBase
     {
         private readonly ApplicationDbContext _context;

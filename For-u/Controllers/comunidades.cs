@@ -10,7 +10,6 @@ namespace For_u.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
     public class ComunidadesController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
@@ -85,7 +84,6 @@ namespace For_u.Controllers
                 ComunidadId = c.ComunidadId,
                 TituloComunidad = c.TituloComunidad,
                 DescripcionComunidad = c.DescripcionComunidad,
-                ComunidadCreadaPor = c.ComunidadCreadaPor,
                 FechaCreacionComunidad = c.FechaCreacionComunidad
             }).ToList();
 
@@ -106,7 +104,6 @@ namespace For_u.Controllers
                 ComunidadId = comunidad.ComunidadId,
                 TituloComunidad = comunidad.TituloComunidad,
                 DescripcionComunidad = comunidad.DescripcionComunidad,
-                ComunidadCreadaPor = comunidad.ComunidadCreadaPor,
                 FechaCreacionComunidad = comunidad.FechaCreacionComunidad
             };
 
