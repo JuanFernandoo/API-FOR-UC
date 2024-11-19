@@ -31,6 +31,11 @@ namespace For_u.Controllers
                 return BadRequest("El nombre de usuario está en uso.");
             }
 
+            if (!request.Email.EndsWith("@ucompensar.edu.co", StringComparison.OrdinalIgnoreCase))
+            {
+                return BadRequest("El dominio de correo debe ser @ucompensar.edu.co");
+            }
+
             var usuario = new Users
             {
                 Email = request.Email,
